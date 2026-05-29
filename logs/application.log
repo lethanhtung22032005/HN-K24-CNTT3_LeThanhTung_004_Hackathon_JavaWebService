@@ -1,0 +1,134 @@
+2026-05-29T07:58:19.447+07:00  INFO 30268 --- [HN-K24-CNTT3_LeThanhTung_004] [restartedMain] r.h.HnK24Cntt3LeThanhTung004Application  : Starting HnK24Cntt3LeThanhTung004Application using Java 21.0.7 with PID 30268 (D:\JavaWebService\bt\HN-K24-CNTT3_LeThanhTung_004\build\classes\java\main started by admin in D:\JavaWebService\bt\HN-K24-CNTT3_LeThanhTung_004)
+2026-05-29T07:58:19.451+07:00  INFO 30268 --- [HN-K24-CNTT3_LeThanhTung_004] [restartedMain] r.h.HnK24Cntt3LeThanhTung004Application  : No active profile set, falling back to 1 default profile: "default"
+2026-05-29T07:58:20.613+07:00  INFO 30268 --- [HN-K24-CNTT3_LeThanhTung_004] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-29T07:58:20.613+07:00  INFO 30268 --- [HN-K24-CNTT3_LeThanhTung_004] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-29T07:58:21.369+07:00  INFO 30268 --- [HN-K24-CNTT3_LeThanhTung_004] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-29T07:58:22.180+07:00  INFO 30268 --- [HN-K24-CNTT3_LeThanhTung_004] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@55f4709a
+2026-05-29T07:58:22.182+07:00  INFO 30268 --- [HN-K24-CNTT3_LeThanhTung_004] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-29T07:58:22.242+07:00  WARN 30268 --- [HN-K24-CNTT3_LeThanhTung_004] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-29T07:58:22.377+07:00 ERROR 30268 --- [HN-K24-CNTT3_LeThanhTung_004] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Property 're.hnk24cntt3_lethanhtung_004.model.Movie.genre' is annotated '@Enumerated' but its type 'java.lang.String' is not an enum
+2026-05-29T07:58:22.378+07:00  WARN 30268 --- [HN-K24-CNTT3_LeThanhTung_004] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Property 're.hnk24cntt3_lethanhtung_004.model.Movie.genre' is annotated '@Enumerated' but its type 'java.lang.String' is not an enum
+2026-05-29T07:58:22.379+07:00  INFO 30268 --- [HN-K24-CNTT3_LeThanhTung_004] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-29T07:58:22.427+07:00  INFO 30268 --- [HN-K24-CNTT3_LeThanhTung_004] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-05-29T07:58:22.431+07:00  INFO 30268 --- [HN-K24-CNTT3_LeThanhTung_004] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-05-29T07:58:22.462+07:00 ERROR 30268 --- [HN-K24-CNTT3_LeThanhTung_004] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Property 're.hnk24cntt3_lethanhtung_004.model.Movie.genre' is annotated '@Enumerated' but its type 'java.lang.String' is not an enum
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1817) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977) ~[spring-context-7.0.7.jar:7.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.7.jar:7.0.7]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.6.jar:4.0.6]
+	at re.hnk24cntt3_lethanhtung_004.HnK24Cntt3LeThanhTung004Application.main(HnK24Cntt3LeThanhTung004Application.java:10) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.0.6.jar:4.0.6]
+Caused by: org.hibernate.AnnotationException: Property 're.hnk24cntt3_lethanhtung_004.model.Movie.genre' is annotated '@Enumerated' but its type 'java.lang.String' is not an enum
+	at org.hibernate.boot.model.internal.BasicValueBinder.prepareBasicAttribute(BasicValueBinder.java:778) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.boot.model.internal.BasicValueBinder.prepareValue(BasicValueBinder.java:362) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.boot.model.internal.BasicValueBinder.setType(BasicValueBinder.java:326) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.boot.model.internal.PropertyBinder.makePropertyAndValue(PropertyBinder.java:263) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.boot.model.internal.PropertyBinder.makePropertyValueAndBind(PropertyBinder.java:330) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.boot.model.internal.PropertyBinder.basicBinder(PropertyBinder.java:1249) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.boot.model.internal.PropertyBinder.propertyBinder(PropertyBinder.java:1133) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.boot.model.internal.PropertyBinder.bindBasicOrComposite(PropertyBinder.java:1020) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.boot.model.internal.PropertyBinder.bindProperty(PropertyBinder.java:909) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.boot.model.internal.PropertyBinder.buildProperty(PropertyBinder.java:792) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.boot.model.internal.PropertyBinder.processElementAnnotations(PropertyBinder.java:719) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.boot.model.internal.EntityBinder.processIdPropertiesIfNotAlready(EntityBinder.java:1072) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.boot.model.internal.EntityBinder.handleIdentifier(EntityBinder.java:380) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.boot.model.internal.EntityBinder.bindEntityClass(EntityBinder.java:217) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.boot.model.internal.AnnotationBinder.bindClass(AnnotationBinder.java:247) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.boot.model.source.internal.annotations.AnnotationMetadataSourceProcessorImpl.processEntityHierarchies(AnnotationMetadataSourceProcessorImpl.java:167) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess$1.processEntityHierarchies(MetadataBuildingProcess.java:318) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.coordinateProcessors(MetadataBuildingProcess.java:352) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:201) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1392) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.populateSessionFactoryBuilder(EntityManagerFactoryBuilderImpl.java:1472) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1454) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:93) ~[spring-orm-7.0.7.jar:7.0.7]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:443) ~[spring-orm-7.0.7.jar:7.0.7]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:436) ~[spring-orm-7.0.7.jar:7.0.7]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:411) ~[spring-orm-7.0.7.jar:7.0.7]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:419) ~[spring-orm-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813) ~[spring-beans-7.0.7.jar:7.0.7]
+	... 18 common frames omitted
+
+2026-05-29T07:58:54.533+07:00  INFO 33672 --- [HN-K24-CNTT3_LeThanhTung_004] [restartedMain] r.h.HnK24Cntt3LeThanhTung004Application  : Starting HnK24Cntt3LeThanhTung004Application using Java 21.0.7 with PID 33672 (D:\JavaWebService\bt\HN-K24-CNTT3_LeThanhTung_004\build\classes\java\main started by admin in D:\JavaWebService\bt\HN-K24-CNTT3_LeThanhTung_004)
+2026-05-29T07:58:54.535+07:00  INFO 33672 --- [HN-K24-CNTT3_LeThanhTung_004] [restartedMain] r.h.HnK24Cntt3LeThanhTung004Application  : No active profile set, falling back to 1 default profile: "default"
+2026-05-29T07:58:55.584+07:00  INFO 33672 --- [HN-K24-CNTT3_LeThanhTung_004] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-29T07:58:55.584+07:00  INFO 33672 --- [HN-K24-CNTT3_LeThanhTung_004] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-29T07:58:56.235+07:00  INFO 33672 --- [HN-K24-CNTT3_LeThanhTung_004] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-29T07:58:56.511+07:00  INFO 33672 --- [HN-K24-CNTT3_LeThanhTung_004] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@eafa694
+2026-05-29T07:58:56.513+07:00  INFO 33672 --- [HN-K24-CNTT3_LeThanhTung_004] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-29T07:58:56.559+07:00  WARN 33672 --- [HN-K24-CNTT3_LeThanhTung_004] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-29T07:58:56.692+07:00 ERROR 33672 --- [HN-K24-CNTT3_LeThanhTung_004] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Property 're.hnk24cntt3_lethanhtung_004.model.Movie.genre' is annotated '@Enumerated' but its type 'java.lang.String' is not an enum
+2026-05-29T07:58:56.692+07:00  WARN 33672 --- [HN-K24-CNTT3_LeThanhTung_004] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Property 're.hnk24cntt3_lethanhtung_004.model.Movie.genre' is annotated '@Enumerated' but its type 'java.lang.String' is not an enum
+2026-05-29T07:58:56.694+07:00  INFO 33672 --- [HN-K24-CNTT3_LeThanhTung_004] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-29T07:58:56.716+07:00  INFO 33672 --- [HN-K24-CNTT3_LeThanhTung_004] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-05-29T07:58:56.721+07:00  INFO 33672 --- [HN-K24-CNTT3_LeThanhTung_004] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-05-29T07:58:56.741+07:00 ERROR 33672 --- [HN-K24-CNTT3_LeThanhTung_004] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Property 're.hnk24cntt3_lethanhtung_004.model.Movie.genre' is annotated '@Enumerated' but its type 'java.lang.String' is not an enum
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1817) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977) ~[spring-context-7.0.7.jar:7.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.7.jar:7.0.7]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.6.jar:4.0.6]
+	at re.hnk24cntt3_lethanhtung_004.HnK24Cntt3LeThanhTung004Application.main(HnK24Cntt3LeThanhTung004Application.java:10) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.0.6.jar:4.0.6]
+Caused by: org.hibernate.AnnotationException: Property 're.hnk24cntt3_lethanhtung_004.model.Movie.genre' is annotated '@Enumerated' but its type 'java.lang.String' is not an enum
+	at org.hibernate.boot.model.internal.BasicValueBinder.prepareBasicAttribute(BasicValueBinder.java:778) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.boot.model.internal.BasicValueBinder.prepareValue(BasicValueBinder.java:362) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.boot.model.internal.BasicValueBinder.setType(BasicValueBinder.java:326) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.boot.model.internal.PropertyBinder.makePropertyAndValue(PropertyBinder.java:263) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.boot.model.internal.PropertyBinder.makePropertyValueAndBind(PropertyBinder.java:330) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.boot.model.internal.PropertyBinder.basicBinder(PropertyBinder.java:1249) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.boot.model.internal.PropertyBinder.propertyBinder(PropertyBinder.java:1133) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.boot.model.internal.PropertyBinder.bindBasicOrComposite(PropertyBinder.java:1020) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.boot.model.internal.PropertyBinder.bindProperty(PropertyBinder.java:909) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.boot.model.internal.PropertyBinder.buildProperty(PropertyBinder.java:792) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.boot.model.internal.PropertyBinder.processElementAnnotations(PropertyBinder.java:719) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.boot.model.internal.EntityBinder.processIdPropertiesIfNotAlready(EntityBinder.java:1072) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.boot.model.internal.EntityBinder.handleIdentifier(EntityBinder.java:380) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.boot.model.internal.EntityBinder.bindEntityClass(EntityBinder.java:217) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.boot.model.internal.AnnotationBinder.bindClass(AnnotationBinder.java:247) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.boot.model.source.internal.annotations.AnnotationMetadataSourceProcessorImpl.processEntityHierarchies(AnnotationMetadataSourceProcessorImpl.java:167) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess$1.processEntityHierarchies(MetadataBuildingProcess.java:318) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.coordinateProcessors(MetadataBuildingProcess.java:352) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:201) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1392) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.populateSessionFactoryBuilder(EntityManagerFactoryBuilderImpl.java:1472) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1454) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:93) ~[spring-orm-7.0.7.jar:7.0.7]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:443) ~[spring-orm-7.0.7.jar:7.0.7]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:436) ~[spring-orm-7.0.7.jar:7.0.7]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:411) ~[spring-orm-7.0.7.jar:7.0.7]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:419) ~[spring-orm-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813) ~[spring-beans-7.0.7.jar:7.0.7]
+	... 18 common frames omitted
+
