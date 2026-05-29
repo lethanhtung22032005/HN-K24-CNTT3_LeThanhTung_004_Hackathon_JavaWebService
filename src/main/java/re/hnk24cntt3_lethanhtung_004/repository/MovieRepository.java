@@ -1,17 +1,22 @@
 package re.hnk24cntt3_lethanhtung_004.repository;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
 import re.hnk24cntt3_lethanhtung_004.model.Movie;
 
-import java.util.List;
-import java.util.Optional;
+@Repository
+public interface MovieRepository extends JpaRepository<Movie, Long> {
 
-public interface MovieRepository extends JpaRepository<Movie, Integer> {
-    @Query("SELECT m FROM Movie m WHERE m.title = :title")
-    Optional<Movie> findByTitle(String title);
+    @Query("SELECT m FROM Movie m WHERE m.isDeleted = false")
+    Page<Movie> findAllActive(Pageable pageable);
 
-    @Query("SELECT m FROM Movie m WHERE m.genre = :genre")
-    List<Movie> findByGenre(String genre);
+    @Query("SELECT m FROM Movie m WHERE m.isDeleted = false " +
+            "AND (LOWER(m.title) LIKE LOWER(CONCAT('%', :keyword, '%')) " +
+            "OR LOWER(m.director) LIKE LOWER(CONCAT('%', :keyword, '%')))")
+    Page<Movie> searchMovies(String keyword, Pageable pageable);
 
+    boolean existsByIdAndIsDeletedFalse(Long id);
 }

@@ -1,4 +1,5 @@
 package re.hnk24cntt3_lethanhtung_004.dto;
+
 import lombok.*;
 import re.hnk24cntt3_lethanhtung_004.model.Genre;
 
@@ -7,11 +8,9 @@ import re.hnk24cntt3_lethanhtung_004.model.Genre;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class MovieResponseDTO {
-    private Long id;
+public class MovieUpdateRequest {
     private String title;
     private String director;
     private Integer durationMinutes;
     private Genre genre;
-    private Boolean isDeleted;
 }
